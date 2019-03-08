@@ -6,6 +6,7 @@ class Api::V1::ScoresController < ApplicationController
   end
 
   def update
+    @score = Score.find(params[:id])
     @score.update(score_params)
   end
 
